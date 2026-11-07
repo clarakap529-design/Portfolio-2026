@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Colors are the named fill styles from the Figma file. */
+:root {
+  --stone-lightbg: #f4efe4;
+  --stone-card: #f1ede4;
+  --green-olive: #6f7355;
+  --green-pale: #e2e5d4;
+  --wood-dark: #51473d;
+  --text-dark: #2e2e2e;
+  --text-headline-2: #0034ad;
+  --text-muted: rgb(0 0 0 / 0.55);
+  --action: #2d6383;
+
+  --background: #ffffff;
+  --foreground: #000000;
+  --primary: var(--action);
+  --primary-foreground: #ffffff;
+  --muted: var(--stone-lightbg);
+  --muted-foreground: var(--text-muted);
+  --border: var(--green-pale);
+  --input: var(--green-pale);
+  --ring: var(--action);
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-stone: var(--stone-lightbg);
+  --color-stone-card: var(--stone-card);
+  --color-olive: var(--green-olive);
+  --color-pale: var(--green-pale);
+  --color-wood: var(--wood-dark);
+  --color-ink: var(--text-dark);
+  --color-headline-2: var(--text-headline-2);
+  --color-action: var(--action);
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-hepta-slab);
+  --font-mono: var(--font-source-code-pro);
+  --font-heading: var(--font-hepta-slab);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+    scroll-padding-top: 1rem;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
